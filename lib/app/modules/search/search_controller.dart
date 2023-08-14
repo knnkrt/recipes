@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:recipes/app/data/provider/api_v1.dart';
 
-class SearchController extends GetxController {
+class SearchPageController extends GetxController {
   ApiClient apiClient = ApiClient();
 
   var focusNode = FocusNode();
