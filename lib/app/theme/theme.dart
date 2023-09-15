@@ -1,7 +1,6 @@
 import 'package:recipes/app/utils/constants/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 
 ThemeData lightTheme = ThemeData(
   colorScheme: const ColorScheme(
@@ -40,7 +39,7 @@ ThemeData lightTheme = ThemeData(
   chipTheme: ChipThemeData(
     backgroundColor: const Color(0xFFf7f7f7),
     padding: EdgeInsets.symmetric(vertical: kHeight5, horizontal: kWidth5),
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Get.width)),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10000)),
     side: BorderSide.none,
   ),
   bottomAppBarTheme: const BottomAppBarTheme(color: Color(0xffffffff)),

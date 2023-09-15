@@ -9,6 +9,8 @@ import 'package:recipes/app/widgets/page/loading_page.dart';
 import 'package:share_plus/share_plus.dart';
 
 class RecipePage extends StatelessWidget {
+  RecipePage({super.key});
+
   final controller = Get.put(RecipeController(), tag: Get.currentRoute);
 
   @override
@@ -54,7 +56,7 @@ class RecipePage extends StatelessWidget {
       ),
       body: Obx(
         () => controller.pageLoading.isTrue
-            ? LoadingPage()
+            ? const LoadingPage()
             : SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

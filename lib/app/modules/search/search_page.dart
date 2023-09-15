@@ -17,6 +17,8 @@ import 'package:recipes/app/widgets/page/loading_page.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class SearchPage extends StatelessWidget {
+  SearchPage({super.key});
+
   final controller = Get.put(SearchPageController());
 
   @override
@@ -221,8 +223,8 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                firstPageProgressIndicatorBuilder: (context) => LoadingPage(),
-                newPageProgressIndicatorBuilder: (context) => LoadingPage(),
+                firstPageProgressIndicatorBuilder: (context) => const LoadingPage(),
+                newPageProgressIndicatorBuilder: (context) => const LoadingPage(),
                 newPageErrorIndicatorBuilder: (context) => const SizedBox.shrink(),
                 noItemsFoundIndicatorBuilder: (context) => const Center(
                   child: Text("No results."),

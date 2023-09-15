@@ -5,6 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 class FrontPage extends StatelessWidget {
+  FrontPage({super.key});
+
   final controller = Get.put(FrontController());
 
   @override

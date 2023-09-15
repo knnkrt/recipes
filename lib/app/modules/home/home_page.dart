@@ -9,6 +9,8 @@ import 'package:recipes/app/widgets/buttons/loading_secondary_button.dart';
 import 'package:recipes/app/widgets/buttons/secondary_button.dart';
 
 class HomePage extends StatelessWidget {
+  HomePage({super.key});
+
   final controller = Get.put(HomeController());
 
   @override

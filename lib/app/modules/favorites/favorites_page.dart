@@ -14,6 +14,8 @@ import 'package:recipes/app/widgets/other/empty_icon_content.dart';
 import 'package:recipes/app/widgets/page/loading_page.dart';
 
 class FavoritesPage extends StatelessWidget {
+  FavoritesPage({super.key});
+
   final controller = Get.put(FavoritesController());
 
   @override
@@ -55,7 +57,7 @@ class FavoritesPage extends StatelessWidget {
                         controller.pagingController.itemList!.removeWhere((element) => element.id == item.id);
 
                         // Refresh list if itemList length 0
-                        if (controller.pagingController.itemList?.length == 0) {
+                        if (controller.pagingController.itemList?.isEmpty ?? false) {
                           controller.pagingController.refresh();
                         }
 
@@ -78,12 +80,12 @@ class FavoritesPage extends StatelessWidget {
               );
             },
             firstPageErrorIndicatorBuilder: (context) => const SizedBox.shrink(),
-            firstPageProgressIndicatorBuilder: (context) => LoadingPage(),
-            newPageProgressIndicatorBuilder: (context) => LoadingPage(),
+            firstPageProgressIndicatorBuilder: (context) => const LoadingPage(),
+            newPageProgressIndicatorBuilder: (context) => const LoadingPage(),
             newPageErrorIndicatorBuilder: (context) => const SizedBox.shrink(),
-            noItemsFoundIndicatorBuilder: (context) => Column(
+            noItemsFoundIndicatorBuilder: (context) => const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 EmptyIconContent(
                   icon: FontAwesomeIcons.heart,
                   text: "No Favorite Recipe",
